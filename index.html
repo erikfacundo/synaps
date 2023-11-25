@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>SYNAPS</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <a target="_blank" href="https://api.whatsapp.com/send/?phone=5492983594259&text&type=phone_number&app_absent=0"
+    id="whatsapp-button" style="position: fixed; width: 50px; z-index: 999; right: 17px; bottom: 50px;"><img
+        style="width:100%;"
+        src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBhdGggc3R5bGU9ImZpbGw6I0VERURFRDsiIGQ9Ik0wLDUxMmwzNS4zMS0xMjhDMTIuMzU5LDM0NC4yNzYsMCwzMDAuMTM4LDAsMjU0LjIzNEMwLDExNC43NTksMTE0Ljc1OSwwLDI1NS4xMTcsMCAgUzUxMiwxMTQuNzU5LDUxMiwyNTQuMjM0UzM5NS40NzYsNTEyLDI1NS4xMTcsNTEyYy00NC4xMzgsMC04Ni41MS0xNC4xMjQtMTI0LjQ2OS0zNS4zMUwwLDUxMnoiLz4KPHBhdGggc3R5bGU9ImZpbGw6IzU1Q0Q2QzsiIGQ9Ik0xMzcuNzEsNDMwLjc4Nmw3Ljk0NSw0LjQxNGMzMi42NjIsMjAuMzAzLDcwLjYyMSwzMi42NjIsMTEwLjM0NSwzMi42NjIgIGMxMTUuNjQxLDAsMjExLjg2Mi05Ni4yMjEsMjExLjg2Mi0yMTMuNjI4UzM3MS42NDEsNDQuMTM4LDI1NS4xMTcsNDQuMTM4UzQ0LjEzOCwxMzcuNzEsNDQuMTM4LDI1NC4yMzQgIGMwLDQwLjYwNywxMS40NzYsODAuMzMxLDMyLjY2MiwxMTMuODc2bDUuMjk3LDcuOTQ1bC0yMC4zMDMsNzQuMTUyTDEzNy43MSw0MzAuNzg2eiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRkVGRUZFOyIgZD0iTTE4Ny4xNDUsMTM1Ljk0NWwtMTYuNzcyLTAuODgzYy01LjI5NywwLTEwLjU5MywxLjc2Ni0xNC4xMjQsNS4yOTcgIGMtNy45NDUsNy4wNjItMjEuMTg2LDIwLjMwMy0yNC43MTcsMzcuOTU5Yy02LjE3OSwyNi40ODMsMy41MzEsNTguMjYyLDI2LjQ4Myw5MC4wNDFzNjcuMDksODIuOTc5LDE0NC43NzIsMTA1LjA0OCAgYzI0LjcxNyw3LjA2Miw0NC4xMzgsMi42NDgsNjAuMDI4LTcuMDYyYzEyLjM1OS03Ljk0NSwyMC4zMDMtMjAuMzAzLDIyLjk1Mi0zMy41NDVsMi42NDgtMTIuMzU5ICBjMC44ODMtMy41MzEtMC44ODMtNy45NDUtNC40MTQtOS43MWwtNTUuNjE0LTI1LjZjLTMuNTMxLTEuNzY2LTcuOTQ1LTAuODgzLTEwLjU5MywyLjY0OGwtMjIuMDY5LDI4LjI0OCAgYy0xLjc2NiwxLjc2Ni00LjQxNCwyLjY0OC03LjA2MiwxLjc2NmMtMTUuMDA3LTUuMjk3LTY1LjMyNC0yNi40ODMtOTIuNjktNzkuNDQ4Yy0wLjg4My0yLjY0OC0wLjg4My01LjI5NywwLjg4My03LjA2MiAgbDIxLjE4Ni0yMy44MzRjMS43NjYtMi42NDgsMi42NDgtNi4xNzksMS43NjYtOC44MjhsLTI1LjYtNTcuMzc5QzE5My4zMjQsMTM4LjU5MywxOTAuNjc2LDEzNS45NDUsMTg3LjE0NSwxMzUuOTQ1Ii8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="></a>
+
+</head>
+
+<body> 
+
+    <header class="bg-light p-3 bg-black">
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+              <img src="./img/logo.png" alt="" class="img-fluid mt-5 mb-5">
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+    <section>
+        <div id="carouselExample" class="carousel slide d-flex align-items-center justify-content-center">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/img-1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/img-3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/img-3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+
+    <section class="synaps-section">
+        <!-- Synaps + texto -->
+        <div class="container mt-5">
+            <div>
+                <h2 class="text-center mb-5 fw-BOLD h2__logo">SYNAPS</h2>
+                <p class="ptexto__quienesomos fw-regular">En Synaps Amoblamientos, llevamos más de 15 años dedicados a la creación de cocinas y vestidores excepcionales, transformando hogares. Nuestra pasión por el diseño y la funcionalidad ha sido la fuerza impulsora detrás de cada proyecto.</p>
+                <p class="ptexto__quienesomos fw-regular">Nuestras cocinas, placares y vestidores están diseñados para resolver tus desafíos diarios, ofreciendo funcionalidad sin sacrificar la estética.</p>
+            </div>
+        </div>
+
+<!-- FIN Synaps + texto --> 
+
+<!--  Ubicaciones -->
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="./img/ubi-1.png" alt="Primera Imagen" class="img-fluid">
+            <p class="text-center m-3">
+                <img src="./img/pisicion.png" alt="Símbolo de Ubicación" class="img-small me-2">
+                <strong>TRESARROYOS:</strong> BETOLOZA 181
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="./img/ubi-2.png" alt="Segunda Imagen" class="img-fluid">
+            <p class="text-center m-3">
+                <img src="./img/pisicion.png" alt="Símbolo de Ubicación" class="img-small me-2">
+                <strong>NECOCHEA:</strong> 63 N°2766
+            </p>
+        </div>
+    </div>
+</div>
+<!-- FIN Ubicaciones -->
+
+
+<!-- Nuevo botón -->
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-8 text-center">
+            <a href="https://www.instagram.com/synapsamoblamientos/" class="btn-custom" target="_blank">
+                <span class="text text-light fs-2 fw-lighter">NUESTROS TRABAJOS</span>
+                <img src="./img/arrow.png" alt="Flecha" class="arrow-img img-fluid pb-2 m-2">
+            </a>
+        </div>
+    </div>
+</div>
+<!--  FIN boton "NUESTROS TRABAJOS"-->
+</section>
+
+<!-- COMO TRABAJAMOS -->
+<section class="comotrabajamos-section bg-black">
+<!-- ... Tu código HTML ... -->
+<div class="container mb-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 text-center">
+            <h2 class="mb-5 mt-5 text-uppercase fw-medium ct__text">Cómo Trabajamos</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <!-- Paso 1 -->
+        <div class="col-md text-center">
+            <img src="./img/sketch.png" alt="Paso 1" class="img-fluid mb-2 step-image">
+            <p class="ct-text mb-1 mt-2">Diseño por profesionales</p>
+        </div>
+        <!-- Flecha 1 -->
+        <div class="col-md text-center">
+            <img src="./img/right-arrow.png" alt="Flecha" class="img-fluid arrow-image">
+        </div>
+        <!-- Paso 2 -->
+        <div class="col-md text-center">
+            <img src="./img/measuring-tape.png" alt="Paso 2" class="img-fluid mb-2 step-image">
+            <p class="ct-text mb-1 mt-2">Medición en obra</p>
+        </div>
+        <!-- Flecha 2 -->
+        <div class="col-md text-center">
+            <img src="./img/right-arrow.png" alt="Flecha" class="img-fluid arrow-image">
+        </div>
+        <!-- Paso 3 -->
+        <div class="col-md text-center">
+            <img src="./img/tools(1).png" alt="Paso 3" class="img-fluid mb-2 step-image">
+            <p class="ct-text mb-1 mt-2">Fabricación</p>
+        </div>
+        <!-- Flecha 3 -->
+        <div class="col-md text-center">
+            <img src="./img/right-arrow.png" alt="Flecha" class="img-fluid arrow-image">
+        </div>
+        <!-- Paso 4 -->
+        <div class="col-md text-center">
+            <img src="./img/truck.png" alt="Paso 4" class="img-fluid mb-2 step-image">
+            <p class="ct-text mb-1 mt-2">Envío</p>
+        </div>
+        <!-- Flecha 4 -->
+        <div class="col-md text-center">
+            <img src="./img/right-arrow.png" alt="Flecha" class="img-fluid arrow-image">
+        </div>
+        <!-- Paso 5 -->
+        <div class="col-md text-center">
+            <img src="./img/cutting.png" alt="Paso 5" class="img-fluid mb-2 step-image">
+            <p class="ct-text mb-1 mt-2">Instalación</p>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- PUNTUALIDAD -->
+    <div class="puntualidad-section">
+        <p class="text-center text-white fs-1 fw-bold">¡Puntualidad en las fechas de entrega!</p>
+    </div>
+    <!-- FIN PUNTUALIDAD -->
+
+</section>
+
+
+<!-- FIN COMO TRABAJAMOS -->
+
+    <!-- Formulario -->
+    <section class="formulario d-flex align-items-center flex-column bg-form">
+        <div class="texto_form">
+            <h2 class="d-flex mt-5 form_text_title fw-light">CONTÁCTESE CON NOSOTROS</h2>
+        </div>
+        <form method="post" class="container mx-auto mt-3">
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-3">
+                    <input type="text" class="form-control" placeholder="Nombre" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <input type="text" class="form-control" placeholder="Apellido" required>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-3">
+                    <input type="email" class="form-control" required placeholder="Email">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <input type="tel" class="form-control" placeholder="Teléfono" required>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Comentarios" required></textarea>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-3 justify-content-end d-flex">
+                    <button type="submit" class="btn btn-custom-form text-white fw-semibold">CONTÁCTENOS</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+
+    <footer class="footer-section">
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Lado izquierdo -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <div class="text-center text-md-start">
+                        <p class="footer-bold">TRES ARROYOS</p>
+                        <p>Betolaza 181</p>
+        
+                        <p class="footer-bold mt-3">NECOCHEA</p>
+                        <p>63 n°2766</p>
+                    </div>
+                </div>
+        
+                <!-- Centro -->
+                <div class="col-md-4 col-sm-12 mb-4 text-center">
+                    <p class="footer-bold">Teléfonos</p>
+                    <p><a href="tel:+5492983422582" class="text-decoration-none text-white">2983-422582</a></p>
+                    <p><a href="tel:+5492983594259" class="text-decoration-none text-white">2983-594259</a></p>
+                </div>
+        
+                <!-- Lado derecho -->
+                <div class="col-md-4 col-sm-12 mb-4 d-flex align-items-center justify-content-md-end justify-content-center">
+                    <img src="./img/instagram.png" alt="Instagram" class="img-fluid me-3">
+                    <a href="https://www.instagram.com/synapsamoblamientos/" target="_blank" rel="noopener noreferrer" class="footer-link text-white text-decoration-none">
+                    <p class="footer-bold mb-0">NUESTROS TRABAJOS</p>
+                    </a>
+                </div>
+                
+        </div>
+    </footer>
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
